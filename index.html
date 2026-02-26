@@ -6,11 +6,21 @@
   <title>精研 見積もりアプリ</title>
   <meta name="description" content="株式会社精研 見積もりアプリ一覧">
 
+  <!-- ファビコン -->
+  <link rel="icon" type="image/png" sizes="32x32" href="icom-32.png">
+
+  <!-- Apple Touch Icon（iOS ホーム画面追加用） -->
+  <link rel="apple-touch-icon" sizes="180x180" href="icom-180.png">
+
   <!-- PWA対応 -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="精研見積">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="theme-color" content="#f5f7fa">
+
+  <!-- PWA マニフェスト -->
+  <link rel="manifest" href="manifest.json">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -58,7 +68,6 @@
       margin-bottom: 36px;
     }
 
-    /* ロゴ画像 */
     .logo {
       width: 120px;
       height: auto;
@@ -180,13 +189,7 @@
 <body>
   <div class="wrapper">
     <header>
-      <!--
-        ★ ロゴ画像の設定方法：
-        このindex.htmlと同じリポジトリに logo.png をアップロードするだけで表示されます。
-        ファイル名が異なる場合は src="ファイル名.拡張子" に変更してください。
-      -->
-      <img src="logo.png" alt="株式会社精研" class="logo">
-
+      <img src="icom-192.png" alt="株式会社精研" class="logo">
       <p class="company">SEIKEN CO., LTD.</p>
       <h1>ESTIMATE</h1>
       <p class="subtitle">見積もりアプリ</p>
@@ -213,7 +216,7 @@
         <span class="card-arrow">›</span>
       </a>
 
-      <a class="card" href="https://seiken-co.github.io/DG.NET.SaaS/" target="_blank">
+      <a class="card" href="https://seiken-co.github.io/DG.NEt.SaaS/" target="_blank">
         <div class="card-icon">💻</div>
         <div class="card-body">
           <div class="card-title">DG.NET SaaS 見積もり</div>
