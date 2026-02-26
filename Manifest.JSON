@@ -2,21 +2,14 @@
   "name": "精研 見積もりアプリ",
   "short_name": "精研見積",
   "description": "株式会社精研 見積もりアプリ一覧",
-  "start_url": ".",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#f5f7fa",
   "theme_color": "#f5f7fa",
   "lang": "ja",
   "icons": [
-    {
-      "src": "icom-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "icom-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
+    { "src": "icom-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icom-512.png", "sizes": "512x512", "type": "image/png" }
   ]
 }
