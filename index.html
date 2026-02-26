@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>精研 見積もりアプリ</title>
+  <meta name="description" content="株式会社精研 見積もりアプリ一覧">
+
+  <!-- PWA対応 -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="精研見積">
+  <meta name="theme-color" content="#f5f7fa">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f5f7fa;
+      --surface: #ffffff;
+      --border: #e2e8f0;
+      --accent1: #c8830a;
+      --accent2: #1a6aad;
+      --accent3: #158a60;
+      --text: #1a2535;
+      --muted: #8a9bb0;
+      --shadow: 0 2px 16px rgba(0,0,0,0.07);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Noto Sans JP', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 520px;
+      animation: fadeUp 0.5s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    /* ロゴ画像 */
+    .logo {
+      width: 120px;
+      height: auto;
+      margin: 0 auto 20px;
+      display: block;
+    }
+
+    .company {
+      font-size: 11px;
+      letter-spacing: 4px;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 44px;
+      letter-spacing: 3px;
+      color: var(--text);
+      line-height: 1;
+    }
+
+    .subtitle {
+      margin-top: 8px;
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    .divider {
+      width: 40px;
+      height: 2px;
+      background: var(--border);
+      margin: 16px auto 0;
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .card {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 10px;
+      padding: 18px 22px;
+      text-decoration: none;
+      color: var(--text);
+      box-shadow: var(--shadow);
+      transition: transform 0.16s ease, box-shadow 0.16s ease;
+    }
+
+    .card:hover {
+      transform: translateX(4px);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.11);
+    }
+
+    .card-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .card-body { flex: 1; }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+
+    .card-desc {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    .card-arrow {
+      color: var(--muted);
+      font-size: 20px;
+      transition: transform 0.16s, color 0.16s;
+    }
+
+    .card:hover .card-arrow {
+      transform: translateX(4px);
+      color: var(--accent);
+    }
+
+    .card:nth-child(1) { --accent: var(--accent1); }
+    .card:nth-child(2) { --accent: var(--accent2); }
+    .card:nth-child(3) { --accent: var(--accent3); }
+
+    .card:nth-child(1) .card-title { color: var(--accent1); }
+    .card:nth-child(2) .card-title { color: var(--accent2); }
+    .card:nth-child(3) .card-title { color: var(--accent3); }
+
+    footer {
+      text-align: center;
+      margin-top: 32px;
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <!--
+        ★ ロゴ画像の設定方法：
+        このindex.htmlと同じリポジトリに logo.png をアップロードするだけで表示されます。
+        ファイル名が異なる場合は src="ファイル名.拡張子" に変更してください。
+      -->
+      <img src="logo.png" alt="株式会社精研" class="logo">
+
+      <p class="company">SEIKEN CO., LTD.</p>
+      <h1>ESTIMATE</h1>
+      <p class="subtitle">見積もりアプリ</p>
+      <div class="divider"></div>
+    </header>
+
+    <div class="cards">
+
+      <a class="card" href="https://seiken-co.github.io/seiken-estimate" target="_blank">
+        <div class="card-icon">🪡</div>
+        <div class="card-body">
+          <div class="card-title">精研 見積もり</div>
+          <div class="card-desc">彩（Sai）・単頭機・少数頭機</div>
+        </div>
+        <span class="card-arrow">›</span>
+      </a>
+
+      <a class="card" href="https://seiken-co.github.io/SEIKEN-FreeForm/" target="_blank">
+        <div class="card-icon">📋</div>
+        <div class="card-body">
+          <div class="card-title">フリーフォーム見積もり</div>
+          <div class="card-desc">自由形式・カスタム対応</div>
+        </div>
+        <span class="card-arrow">›</span>
+      </a>
+
+      <a class="card" href="https://seiken-co.github.io/DG.NET.SaaS/" target="_blank">
+        <div class="card-icon">💻</div>
+        <div class="card-body">
+          <div class="card-title">DG.NET SaaS 見積もり</div>
+          <div class="card-desc">パーソナライズソフトウェア</div>
+        </div>
+        <span class="card-arrow">›</span>
+      </a>
+
+    </div>
+
+    <footer>© SEIKEN Co., Ltd.</footer>
+  </div>
+</body>
+</html>
