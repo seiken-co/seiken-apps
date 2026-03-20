@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>精研 見積もりアプリ</title>
-  <meta name="description" content="株式会社精研 見積もりアプリ一覧">
+  <title>精研 APPS</title>
+  <meta name="description" content="株式会社精研 業務アプリ一覧">
 
   <!-- ファビコン -->
   <link rel="icon" type="image/png" sizes="32x32" href="icom-32.png">
@@ -15,7 +15,7 @@
   <!-- PWA対応 -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="精研見積">
+  <meta name="apple-mobile-web-app-title" content="精研 APPS">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="theme-color" content="#f5f7fa">
 
@@ -33,6 +33,8 @@
       --accent1: #c8830a;
       --accent2: #1a6aad;
       --accent3: #158a60;
+      --accent4: #7c3aed;
+      --accent5: #b91c4a;
       --text: #1a2535;
       --muted: #8a9bb0;
       --shadow: 0 2px 16px rgba(0,0,0,0.07);
@@ -105,6 +107,31 @@
       margin: 16px auto 0;
     }
 
+    /* セクション */
+    .section {
+      margin-bottom: 24px;
+    }
+
+    .section-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      padding-left: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
     .cards {
       display: flex;
       flex-direction: column;
@@ -150,6 +177,7 @@
       font-size: 15px;
       font-weight: 700;
       margin-bottom: 3px;
+      color: var(--accent);
     }
 
     .card-desc {
@@ -169,13 +197,12 @@
       color: var(--accent);
     }
 
-    .card:nth-child(1) { --accent: var(--accent1); }
-    .card:nth-child(2) { --accent: var(--accent2); }
-    .card:nth-child(3) { --accent: var(--accent3); }
-
-    .card:nth-child(1) .card-title { color: var(--accent1); }
-    .card:nth-child(2) .card-title { color: var(--accent2); }
-    .card:nth-child(3) .card-title { color: var(--accent3); }
+    /* アクセントカラー割り当て */
+    .c1 { --accent: var(--accent1); }
+    .c2 { --accent: var(--accent2); }
+    .c3 { --accent: var(--accent3); }
+    .c4 { --accent: var(--accent4); }
+    .c5 { --accent: var(--accent5); }
 
     footer {
       text-align: center;
@@ -191,45 +218,69 @@
     <header>
       <img src="icom-192.png" alt="株式会社精研" class="logo">
       <p class="company">SEIKEN CO., LTD.</p>
-      <h1>ESTIMATE</h1>
-      <p class="subtitle">見積もりアプリ</p>
+      <h1>APPS</h1>
+      <p class="subtitle">業務アプリ</p>
       <div class="divider"></div>
     </header>
 
-    <div class="cards">
+    <!-- 見積もり -->
+    <div class="section">
+      <div class="section-label">見積もり</div>
+      <div class="cards">
+        <a class="card c1" href="https://seiken-co.github.io/seiken-estimate/">
+          <div class="card-icon">🪡</div>
+          <div class="card-body">
+            <div class="card-title">精研 見積もり</div>
+            <div class="card-desc">彩（Sai）・単頭機・少数頭機</div>
+          </div>
+          <span class="card-arrow">›</span>
+        </a>
 
-      <a class="card" href="https://seiken-co.github.io/seiken-estimate/">
-        <div class="card-icon">🪡</div>
-        <div class="card-body">
-          <div class="card-title">精研 見積もり</div>
-          <div class="card-desc">彩（Sai）・単頭機・少数頭機</div>
-        </div>
-        <span class="card-arrow">›</span>
-      </a>
+        <a class="card c2" href="https://seiken-co.github.io/SEIKEN-FreeForm/">
+          <div class="card-icon">📋</div>
+          <div class="card-body">
+            <div class="card-title">フリーフォーム見積もり</div>
+            <div class="card-desc">自由形式・カスタム対応</div>
+          </div>
+          <span class="card-arrow">›</span>
+        </a>
 
-      <a class="card" href="https://seiken-co.github.io/SEIKEN-FreeForm/">
-        <div class="card-icon">📋</div>
-        <div class="card-body">
-          <div class="card-title">フリーフォーム見積もり</div>
-          <div class="card-desc">自由形式・カスタム対応</div>
-        </div>
-        <span class="card-arrow">›</span>
-      </a>
+        <a class="card c3" href="https://seiken-co.github.io/DG.NET.SaaS/">
+          <div class="card-icon">💻</div>
+          <div class="card-body">
+            <div class="card-title">DG.NET SaaS 見積もり</div>
+            <div class="card-desc">パーソナライズソフトウェア</div>
+          </div>
+          <span class="card-arrow">›</span>
+        </a>
+      </div>
+    </div>
 
-      <a class="card" href="https://seiken-co.github.io/DG.NET.SaaS/">
-        <div class="card-icon">💻</div>
-        <div class="card-body">
-          <div class="card-title">DG.NET SaaS 見積もり</div>
-          <div class="card-desc">パーソナライズソフトウェア</div>
-        </div>
-        <span class="card-arrow">›</span>
-      </a>
+    <!-- 展示会 -->
+    <div class="section">
+      <div class="section-label">展示会</div>
+      <div class="cards">
+        <a class="card c4" href="https://daihiguchi.art/exhibition/form.html">
+          <div class="card-icon">📝</div>
+          <div class="card-body">
+            <div class="card-title">展示会アンケート</div>
+            <div class="card-desc">来場者情報・アンケート入力</div>
+          </div>
+          <span class="card-arrow">›</span>
+        </a>
 
+        <a class="card c5" href="https://daihiguchi.art/exhibition/admin.html">
+          <div class="card-icon">🔐</div>
+          <div class="card-body">
+            <div class="card-title">展示会 管理システム</div>
+            <div class="card-desc">来場者一覧・集計・CSV出力</div>
+          </div>
+          <span class="card-arrow">›</span>
+        </a>
+      </div>
     </div>
 
     <footer>© SEIKEN Co., Ltd.</footer>
   </div>
 </body>
 </html>
-
-
